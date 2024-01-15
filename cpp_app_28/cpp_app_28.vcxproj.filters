@@ -4,10 +4,21 @@
     <Filter Include="Main">
       <UniqueIdentifier>{24118abe-7399-42b2-adc5-061489d929eb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Queue">
+      <UniqueIdentifier>{09090c8e-98b3-40fe-ae44-80f7f54ccac6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Main</Filter>
     </ClCompile>
+    <ClCompile Include="Queue.cpp">
+      <Filter>Queue</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Queue.h">
+      <Filter>Queue</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
