@@ -1,11 +1,7 @@
-#include "Minibus.h"
-#include "Passenger.h"
-#include "Stop.h"
+#include "Simulation.h"
 
-int main()
-{
-	Minibus m;
-	Stop s;
-	Passenger p;
+int main() {
+	Simulation simulation;
+	simulation.runSimulation();
 	return 0;
 }

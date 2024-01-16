@@ -7,31 +7,16 @@
 
 class Stop {
 public:
-	Stop();
-	void run();
-
+    Stop(bool isFinal);
+    int getStopNumber() const;
+    void passengerArrival();
+    void minibusArrival(Minibus& minibus);
+    int getPeopleAtStop() const;
 private:
-    double getPassengerArrivalTime();
-    double getMinibusArrivalTime();
-
-    bool isFinalStop();
-    
-    void determineAverageStayTime();
-    void determineTimeBetweenMinibuses();
-
-    double passengerArrivalTime;
-    double minibusArrivalTime;
-    double averageStayTime;
-    double timeBetweenMinibuses;
-
-    int passengerCount;
-    int minibusCount;
-    int finalStop;
-
-    Minibus minibus;
-    Passenger passenger;
-
-    double time;
+    static int stopCounter;
+    int stopNumber;
+    int peopleAtStop;
+    bool finalStop;
 };
 
-#endif 
+#endif

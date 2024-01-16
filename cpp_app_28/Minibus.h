@@ -3,11 +3,13 @@
 
 #include <iostream>
 #include "Passenger.h"
-#include "Stop.h"
 
 class Minibus {
 public:
-	Minibus();
+    Minibus();
+    int getEmptySeats();
+private:
+    int emptySeats;
 };
 
 #endif 
