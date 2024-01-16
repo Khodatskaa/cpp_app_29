@@ -12,14 +12,14 @@ void Stop::passengerArrival() {
     peopleAtStop++;
 }
 
-void Stop::minibusArrival(Minibus& minibus) {
+void Stop::minibusArrival(Minibus& minibus, int passengersEntering, int passengersLeaving) {
     int emptySeats = minibus.getEmptySeats();
-    if (peopleAtStop > emptySeats) {
-        peopleAtStop -= emptySeats;
-    }
-    else {
-        peopleAtStop = 0;
-    }
+
+    peopleAtStop += passengersEntering;
+    peopleAtStop -= passengersLeaving;
+
+    std::cout << "Bus departed from Stop " << getStopNumber() << ". Seats left: " << emptySeats - peopleAtStop << std::endl;
+    std::cout << "Passengers entering: " << passengersEntering << ", Passengers leaving: " << passengersLeaving << std::endl;
 }
 
 int Stop::getPeopleAtStop() const {
